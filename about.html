@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Vansh Industries - Fire XROSS™</title>
+  <meta name="description" content="Learn about Vansh Industries and Fire XROSS: our mission to safeguard every home, vehicle, and factory across India with autonomous 360° fire suppression spheres." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fireRed: '#D90429',
+            fireDarkRed: '#BA181B',
+            fireOrange: '#EA580C',
+            fireAmber: '#D97706',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 font-body antialiased selection:bg-rose-500 selection:text-white">
+
+  <!-- Top Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 relative z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 text-[11px]">
+        <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-red-600/30 text-red-400 font-mono font-semibold text-[10px]">ISO 9001:2015</span>
+        <span class="hidden sm:inline text-slate-300">Vansh Industries • Automatic 360° Fire Suppression Balls</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-medium">
+        <a href="dealership.html" class="text-slate-300 hover:text-white transition">Distributorship</a>
+        <span class="text-slate-700">|</span>
+        <a href="tel:+918302550902" class="text-slate-200 hover:text-white transition flex items-center gap-1.5 font-bold">
+          <i class="fas fa-phone-alt text-fireRed text-[10px]"></i> +91 83025 50902
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 py-3.5">
+        
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-red-600 to-orange-500 p-0.5 shadow-sm group-hover:scale-105 transition-transform">
+            <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
+              <i class="fas fa-fire text-red-600 text-lg"></i>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="font-heading font-extrabold text-xl tracking-tight text-slate-900">VANSH</span>
+            <span class="font-heading font-extrabold text-xl tracking-tight text-fireRed">XROSS</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 xl:gap-10 text-[13.5px] font-semibold text-slate-600">
+          <a href="products.html" class="hover:text-fireRed transition-colors py-1">Products</a>
+          <a href="how-it-works.html" class="hover:text-fireRed transition-colors py-1">How It Works</a>
+          <a href="index.html#videoShowcase" class="hover:text-fireRed transition-colors py-1">Live Videos</a>
+          <a href="calculator.html" class="hover:text-fireRed transition-colors py-1">Safety Calculator</a>
+          <a href="dealership.html" class="hover:text-fireRed transition-colors py-1">Distributors</a>
+          <a href="about.html" class="text-fireRed font-bold transition-colors py-1">About</a>
+          <a href="contact.html" class="hover:text-fireRed transition-colors py-1">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-3 shrink-0">
+          <a href="https://api.whatsapp.com/send?phone=918302550902&text=Hello%20Vansh%20Industries%2C%20I%20would%20like%20a%20quotation%20for%20Fire%20XROSS." target="_blank" class="btn-whatsapp px-4 py-2 rounded-xl text-white font-bold text-xs flex items-center gap-2 shadow-sm transition">
+            <i class="fab fa-whatsapp text-sm"></i>
+            <span>WhatsApp Quote</span>
+          </a>
+        </div>
+
+        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-slate-200 transition">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenuDrawer" class="fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-white border-l border-slate-200 z-50 transform translate-x-full transition-transform duration-300 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white text-sm">
+            <i class="fas fa-fire"></i>
+          </div>
+          <span class="font-heading font-extrabold text-lg text-slate-900">VANSH XROSS</span>
+        </div>
+        <button id="mobileMenuClose" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-500 hover:text-slate-900 flex items-center justify-center">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col gap-1 text-sm font-semibold">
+        <a href="index.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-home w-5 text-slate-400"></i> Home
+        </a>
+        <a href="products.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-fire-extinguisher w-5 text-slate-400"></i> Products Catalog
+        </a>
+        <a href="how-it-works.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-atom w-5 text-slate-400"></i> How It Works
+        </a>
+        <a href="index.html#videoShowcase" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-play-circle w-5 text-slate-400"></i> Live Videos
+        </a>
+        <a href="calculator.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-calculator w-5 text-slate-400"></i> Safety Calculator
+        </a>
+        <a href="dealership.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-handshake w-5 text-slate-400"></i> Distributorship
+        </a>
+        <a href="about.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-fireRed bg-red-50 font-bold">
+          <i class="fas fa-building w-5 text-fireRed"></i> About Us
+        </a>
+        <a href="contact.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-headset w-5 text-slate-400"></i> Contact Us
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-200 space-y-2.5">
+      <a href="https://api.whatsapp.com/send?phone=918302550902" target="_blank" class="w-full btn-whatsapp py-3 rounded-xl text-white font-bold text-center flex items-center justify-center gap-2 text-sm shadow-md">
+        <i class="fab fa-whatsapp text-lg"></i> WhatsApp +91 83025 50902
+      </a>
+      <a href="tel:+918302550902" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-700 font-semibold text-xs text-center flex items-center justify-center gap-2">
+        <i class="fas fa-phone-alt text-fireRed"></i> Call +91 83025 50902
+      </a>
+      <div class="text-[11px] text-center text-slate-500 pt-1">
+        CD-48 First Floor, Dadudayal Nagar, Jaipur, Rajasthan 302020
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="pt-16 pb-12 bg-hero-light text-center border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="badge-safety-light inline-block mb-3">Our Identity & Mission</div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        Reimagining Fire Protection <br />
+        <span class="text-gradient-fire">For Every Indian Household & Enterprise</span>
+      </h1>
+      <p class="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
+        <strong>Vansh Industries (Fire XROSS™)</strong> was founded with a singular conviction: No human life or vital business asset should ever be lost to a fire due to panic, lack of specialized training, or unmaintained equipment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Story & Vision -->
+  <section class="py-16 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <div class="light-card rounded-3xl p-8 sm:p-12 border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-lg">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-fireRed text-xs font-mono font-bold">
+            THE REAL-WORLD PROBLEM
+          </div>
+          <h2 class="text-3xl font-bold text-slate-900">Why Traditional Fire Cylinders Fail When Needed Most</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            In 92% of domestic and commercial fire incidents, victims experience instant panic. Traditional metal fire extinguishers require reading complex instruction labels, unlocking safety pins, aiming high-pressure nozzles, and walking directly toward scorching radiant heat.
+          </p>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Furthermore, over 65% of installed fire cylinders fail during real emergencies due to lost gas pressure, expired powder cakes, or skipped annual maintenance routines.
+          </p>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700">
+            <strong>The Fire XROSS Solution:</strong> Simply toss the ball from 5 meters away or mount it on the included bracket for 24/7 autonomous protection. It activates on its own within 3 to 5 seconds upon flame contact.
+          </div>
+        </div>
+        <div class="lg:col-span-5 bg-slate-50 rounded-2xl p-8 border border-slate-200 text-center">
+          <div class="text-5xl font-extrabold text-fireRed font-heading mb-2">92%</div>
+          <div class="text-sm font-bold text-slate-900 mb-4">Panic & Hesitation Rate in Traditional Extinguisher Deployment</div>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Vansh Fire XROSS eliminates this barrier entirely. Anyone — including elderly parents, office staff, and homemakers — can deploy it safely.
+          </p>
+        </div>
+      </div>
+
+      <!-- Core Values -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="light-card p-8">
+          <div class="w-12 h-12 rounded-xl bg-orange-100 text-fireOrange flex items-center justify-center text-xl mb-5 border border-orange-200">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Our Vision</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            To establish an autonomous, maintenance-free fire safety sphere above every electrical panel, domestic kitchen, automobile engine, and industrial ceiling across the nation.
+          </p>
+        </div>
+
+        <div class="light-card p-8">
+          <div class="w-12 h-12 rounded-xl bg-red-100 text-fireRed flex items-center justify-center text-xl mb-5 border border-red-200">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Our Mission</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Deliver world-class, rigorously tested, eco-friendly fire suppression spheres at honest factory prices with 5-year zero-maintenance guarantees.
+          </p>
+        </div>
+
+        <div class="light-card p-8">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-5 border border-emerald-200">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Social Responsibility</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Empowering every demographic — including homemakers, school children, and elderly citizens — with life-saving equipment that anyone can deploy in seconds.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Corporate Office -->
+      <div class="light-card rounded-3xl p-8 border border-slate-200 text-center max-w-2xl mx-auto shadow-md">
+        <h3 class="text-xl font-bold text-slate-900 mb-2">Registered Corporate Headquarters</h3>
+        <p class="text-slate-600 text-sm mb-4">
+          <strong>Vansh Industries / Royal Rajasthan</strong><br />
+          CD-48 First Floor, Dadudayal Nagar, Jaipur, Rajasthan 302020
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold">
+          <a href="tel:+918302550902" class="btn-primary-red px-5 py-2.5 rounded-xl text-white flex items-center gap-2">
+            <i class="fas fa-phone-alt"></i> +91 83025 50902
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=918302550902" target="_blank" class="btn-whatsapp px-5 py-2.5 rounded-xl text-white flex items-center gap-2">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 text-xs py-12 text-center">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <i class="fas fa-fire text-fireRed text-lg"></i>
+        <span class="font-heading font-bold text-white text-base">VANSH INDUSTRIES • FIRE XROSS™</span>
+      </div>
+      <p class="text-slate-400">CD-48 First Floor, Dadudayal Nagar, Jaipur, Rajasthan 302020 • Phone: +91 83025 50902</p>
+      <p class="text-slate-500">© 2026 Vansh Industries. All Rights Reserved to CJ. Engineered with Pride in India.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
