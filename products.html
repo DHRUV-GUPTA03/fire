@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Vansh Fire XROSS™ - Automatic Fire Extinguishing Balls</title>
+  <meta name="description" content="Explore the full product lineup of Vansh Fire XROSS: Classic 1.3kg, Compact 400g, Pro Industrial Modular 2.5kg & 5kg, and vehicle engine kits." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fireRed: '#D90429',
+            fireDarkRed: '#BA181B',
+            fireOrange: '#EA580C',
+            fireAmber: '#D97706',
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['Space Grotesk', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 font-body antialiased selection:bg-rose-500 selection:text-white">
+
+  <!-- Top Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 relative z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2 text-[11px]">
+        <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-red-600/30 text-red-400 font-mono font-semibold text-[10px]">ISO 9001:2015</span>
+        <span class="hidden sm:inline text-slate-300">Vansh Industries • Automatic 360° Fire Suppression Balls</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] font-medium">
+        <a href="dealership.html" class="text-slate-300 hover:text-white transition">Distributorship</a>
+        <span class="text-slate-700">|</span>
+        <a href="tel:+918302550902" class="text-slate-200 hover:text-white transition flex items-center gap-1.5 font-bold">
+          <i class="fas fa-phone-alt text-fireRed text-[10px]"></i> +91 83025 50902
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-18 py-3.5">
+        
+        <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-red-600 to-orange-500 p-0.5 shadow-sm group-hover:scale-105 transition-transform">
+            <div class="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
+              <i class="fas fa-fire text-red-600 text-lg"></i>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="font-heading font-extrabold text-xl tracking-tight text-slate-900">VANSH</span>
+            <span class="font-heading font-extrabold text-xl tracking-tight text-fireRed">XROSS</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 xl:gap-10 text-[13.5px] font-semibold text-slate-600">
+          <a href="products.html" class="text-fireRed font-bold transition-colors py-1">Products</a>
+          <a href="how-it-works.html" class="hover:text-fireRed transition-colors py-1">How It Works</a>
+          <a href="index.html#videoShowcase" class="hover:text-fireRed transition-colors py-1">Live Videos</a>
+          <a href="calculator.html" class="hover:text-fireRed transition-colors py-1">Safety Calculator</a>
+          <a href="dealership.html" class="hover:text-fireRed transition-colors py-1">Distributors</a>
+          <a href="about.html" class="hover:text-fireRed transition-colors py-1">About</a>
+          <a href="contact.html" class="hover:text-fireRed transition-colors py-1">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-3 shrink-0">
+          <a href="https://api.whatsapp.com/send?phone=918302550902&text=Hello%20Vansh%20Industries%2C%20I%20would%20like%20a%20quotation%20for%20Fire%20XROSS." target="_blank" class="btn-whatsapp px-4 py-2 rounded-xl text-white font-bold text-xs flex items-center gap-2 shadow-sm transition">
+            <i class="fab fa-whatsapp text-sm"></i>
+            <span>WhatsApp Quote</span>
+          </a>
+        </div>
+
+        <button id="mobileMenuBtn" class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 flex items-center justify-center hover:bg-slate-200 transition">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileMenuDrawer" class="fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-white border-l border-slate-200 z-50 transform translate-x-full transition-transform duration-300 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white text-sm">
+            <i class="fas fa-fire"></i>
+          </div>
+          <span class="font-heading font-extrabold text-lg text-slate-900">VANSH XROSS</span>
+        </div>
+        <button id="mobileMenuClose" class="w-8 h-8 rounded-lg bg-slate-100 text-slate-500 hover:text-slate-900 flex items-center justify-center">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <nav class="mt-6 flex flex-col gap-1 text-sm font-semibold">
+        <a href="index.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-home w-5 text-slate-400"></i> Home
+        </a>
+        <a href="products.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-fireRed bg-red-50 font-bold">
+          <i class="fas fa-fire-extinguisher w-5 text-fireRed"></i> Products Catalog
+        </a>
+        <a href="how-it-works.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-atom w-5 text-slate-400"></i> How It Works
+        </a>
+        <a href="index.html#videoShowcase" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-play-circle w-5 text-slate-400"></i> Live Videos
+        </a>
+        <a href="calculator.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-calculator w-5 text-slate-400"></i> Safety Calculator
+        </a>
+        <a href="dealership.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-handshake w-5 text-slate-400"></i> Distributorship
+        </a>
+        <a href="about.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-building w-5 text-slate-400"></i> About Us
+        </a>
+        <a href="contact.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
+          <i class="fas fa-headset w-5 text-slate-400"></i> Contact Us
+        </a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-200 space-y-2.5">
+      <a href="https://api.whatsapp.com/send?phone=918302550902" target="_blank" class="w-full btn-whatsapp py-3 rounded-xl text-white font-bold text-center flex items-center justify-center gap-2 text-sm shadow-md">
+        <i class="fab fa-whatsapp text-lg"></i> WhatsApp +91 83025 50902
+      </a>
+      <a href="tel:+918302550902" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-700 font-semibold text-xs text-center flex items-center justify-center gap-2">
+        <i class="fas fa-phone-alt text-fireRed"></i> Call +91 83025 50902
+      </a>
+      <div class="text-[11px] text-center text-slate-500 pt-1">
+        CD-48 First Floor, Dadudayal Nagar, Jaipur, Rajasthan 302020
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="pt-16 pb-12 bg-hero-light text-center border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="badge-safety-light inline-block mb-3">Complete Engineering Catalog</div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        The Complete <span class="text-gradient-fire">Vansh Fire XROSS™</span> Lineup
+      </h1>
+      <p class="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
+        Engineered for every tier of fire vulnerability — from small home kitchens and automotive engine compartments to expansive industrial warehousing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Product Details -->
+  <section class="py-16 bg-[#F8FAFC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Classic 1.3kg -->
+      <div class="light-card rounded-3xl p-8 sm:p-12 border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-lg">
+        
+        <div class="lg:col-span-5 flex justify-center bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <img 
+            src="assets/product-image.png" 
+            alt="Vansh Fire XROSS Classic 1.3kg" 
+            class="max-w-[260px] sm:max-w-[300px] h-auto object-contain cursor-pointer hover:scale-105 transition-transform" 
+            onclick="openImageModal('assets/product-image.png', 'Vansh Fire XROSS Classic 1.3kg')"
+          />
+        </div>
+
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-fireRed text-xs font-bold font-mono">
+            FLAGSHIP RESIDENTIAL & COMMERCIAL
+          </div>
+          <h2 class="text-3xl font-bold text-slate-900">Vansh XROSS Classic (1.3 kg / 150mm)</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            The benchmark in automated fire suppression. Designed for mounting directly over residential kitchen hobs, electrical meter panels, inverter banks, and commercial server racks. Features dual-mode activation (passive automatic mounting or active throw).
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Gross Weight</span>
+              <span class="text-sm font-bold text-slate-900">1.3 kg (± 0.2kg)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Radial Coverage</span>
+              <span class="text-sm font-bold text-emerald-700">8–10 m² (8–9 m³)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Activation Speed</span>
+              <span class="text-sm font-bold text-fireRed">3 to 5 Seconds</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Acoustic Alert</span>
+              <span class="text-sm font-bold text-amber-700">128 dB Warning Alarm</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Chemical Agent</span>
+              <span class="text-sm font-bold text-blue-700">90% MAP ABC Powder</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Service Lifespan</span>
+              <span class="text-sm font-bold text-slate-900">5 Years (Zero Service)</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="https://api.whatsapp.com/send?phone=918302550902&text=Hello%2C%20I%20want%20a%20quotation%20for%20Vansh%20XROSS%20Classic%201.3kg" target="_blank" class="btn-primary-red px-6 py-3 rounded-xl text-white font-bold text-sm shadow-md">
+              Request WhatsApp Quote
+            </a>
+            <button onclick="downloadDatasheet('Vansh XROSS Classic 1.3kg')" class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-sm font-semibold flex items-center gap-2 transition">
+              <i class="fas fa-file-pdf text-fireRed"></i> Download Spec Sheet
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Compact 400g -->
+      <div class="light-card rounded-3xl p-8 sm:p-12 border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-lg">
+        
+        <div class="lg:col-span-5 flex justify-center bg-slate-50 p-6 rounded-2xl border border-slate-200 order-1 lg:order-2">
+          <img 
+            src="assets/salient-features.jpeg" 
+            alt="Vansh Fire XROSS Compact 400g & Retail Packaging" 
+            class="max-w-[280px] h-auto object-contain cursor-pointer hover:scale-105 transition-transform" 
+            onclick="openImageModal('assets/salient-features.jpeg', 'Vansh Fire XROSS Packaging & Compact Specs')"
+          />
+        </div>
+
+        <div class="lg:col-span-7 space-y-5 order-2 lg:order-1">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold font-mono">
+            AUTOMOTIVE, FLEET & ELECTRICAL CABINETS
+          </div>
+          <h2 class="text-3xl font-bold text-slate-900">Vansh XROSS Compact (400g / 110mm)</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Ultra-compact miniaturized suppression sphere built with thermal-resistant casing specifically for confined spaces: vehicle engine bays, EV battery enclosures, solar inverter boxes, CNC machine cabinets, and small meter boxes.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Gross Weight</span>
+              <span class="text-sm font-bold text-slate-900">400 g (± 50g)</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Enclosed Coverage</span>
+              <span class="text-sm font-bold text-emerald-700">1.5 to 3.0 m³</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Operating Temp</span>
+              <span class="text-sm font-bold text-amber-700">-40°C to +85°C</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Acoustic Alert</span>
+              <span class="text-sm font-bold text-fireRed">118 dB Acoustic Pop</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Mounting Hardware</span>
+              <span class="text-sm font-bold text-blue-700">Vibration-Resistant Bracket</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Target Application</span>
+              <span class="text-sm font-bold text-slate-900">Cars, Trucks, EV Batteries</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="https://api.whatsapp.com/send?phone=918302550902&text=Hello%2C%20I%20want%20fleet%20pricing%20for%20Vansh%20XROSS%20Compact%20400g" target="_blank" class="btn-primary-orange px-6 py-3 rounded-xl text-white font-bold text-sm shadow-md">
+              Request Fleet Pricing
+            </a>
+            <button onclick="downloadDatasheet('Vansh XROSS Compact 400g')" class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-sm font-semibold flex items-center gap-2 transition">
+              <i class="fas fa-file-pdf text-fireRed"></i> Download Spec Sheet
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pro Modular -->
+      <div class="light-card rounded-3xl p-8 sm:p-12 border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-lg">
+        
+        <div class="lg:col-span-5 flex justify-center bg-slate-50 p-6 rounded-2xl border border-slate-200">
+          <img 
+            src="assets/key-features.jpeg" 
+            alt="Vansh Fire XROSS Pro Industrial" 
+            class="max-w-[280px] h-auto object-contain cursor-pointer hover:scale-105 transition-transform" 
+            onclick="openImageModal('assets/key-features.jpeg', 'Vansh Fire XROSS Pro Industrial & Key Features')"
+          />
+        </div>
+
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold font-mono">
+            HEAVY INDUSTRIAL & WAREHOUSING
+          </div>
+          <h2 class="text-3xl font-bold text-slate-900">Vansh XROSS Pro Modular (2.5 kg & 5.0 kg)</h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            High-output modular suppression spheres designed for elevated ceiling installations in factories, textile facilities, chemical storehouses, transformer yards, and logistics centers. Can be networked in multi-point matrices for wide-area coverage.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Agent Weight</span>
+              <span class="text-sm font-bold text-slate-900">2.5 kg or 5.0 kg ABC</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Floor Coverage</span>
+              <span class="text-sm font-bold text-emerald-700">Up to 35 m² Matrix</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Acoustic Signal</span>
+              <span class="text-sm font-bold text-amber-700">138 dB High-Output</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Installation</span>
+              <span class="text-sm font-bold text-blue-700">Ceiling Modular Suspension</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Fire Classes</span>
+              <span class="text-sm font-bold text-fireRed">Classes A, B, C & E</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-[11px] text-slate-500 block">Warranty</span>
+              <span class="text-sm font-bold text-slate-900">5-Year Certified Life</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="https://api.whatsapp.com/send?phone=918302550902&text=Hello%2C%20I%20want%20an%20industrial%20quote%20for%20Vansh%20XROSS%20Pro" target="_blank" class="btn-primary-red px-6 py-3 rounded-xl text-white font-bold text-sm shadow-md">
+              Industrial WhatsApp RFQ
+            </a>
+            <button onclick="downloadDatasheet('Vansh XROSS Pro Modular 5kg')" class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-sm font-semibold flex items-center gap-2 transition">
+              <i class="fas fa-file-pdf text-fireRed"></i> Download Spec Sheet
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Specifications Matrix -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">Technical Specifications Matrix</h2>
+        <p class="text-slate-600 text-sm mt-2">Comprehensive side-by-side engineering parameters</p>
+      </div>
+
+      <div class="light-card rounded-2xl overflow-x-auto shadow-md">
+        <table class="w-full text-left text-sm border-collapse table-light">
+          <thead>
+            <tr class="text-xs uppercase">
+              <th class="py-4 px-6 font-bold">Specification</th>
+              <th class="py-4 px-6 text-fireRed font-bold bg-red-50">Vansh XROSS Classic</th>
+              <th class="py-4 px-6 text-blue-700 font-bold">Vansh XROSS Compact</th>
+              <th class="py-4 px-6 text-amber-700 font-bold">Vansh XROSS Pro Modular</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-700">
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Gross Weight</td>
+              <td class="py-3.5 px-6 bg-red-50/50 font-semibold text-fireRed">1.3 kg (± 0.2 kg)</td>
+              <td class="py-3.5 px-6">400 g (± 50 g)</td>
+              <td class="py-3.5 px-6">2.5 kg / 5.0 kg</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Ball Diameter</td>
+              <td class="py-3.5 px-6 bg-red-50/50">150 mm (6.0 in)</td>
+              <td class="py-3.5 px-6">110 mm (4.3 in)</td>
+              <td class="py-3.5 px-6">220 mm / 300 mm</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Extinguishing Agent</td>
+              <td class="py-3.5 px-6 bg-red-50/50 font-semibold">Monoammonium Phosphate (90% MAP)</td>
+              <td class="py-3.5 px-6">Monoammonium Phosphate (90% MAP)</td>
+              <td class="py-3.5 px-6">Monoammonium Phosphate (90% MAP)</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Trigger Reaction Time</td>
+              <td class="py-3.5 px-6 bg-red-50/50 font-semibold text-emerald-700">3 to 5 seconds</td>
+              <td class="py-3.5 px-6 font-semibold text-emerald-700">2 to 4 seconds</td>
+              <td class="py-3.5 px-6 font-semibold text-emerald-700">3 to 5 seconds</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Acoustic Signal Level</td>
+              <td class="py-3.5 px-6 bg-red-50/50">128 dB Warning Alarm</td>
+              <td class="py-3.5 px-6">118 dB Warning Alarm</td>
+              <td class="py-3.5 px-6">138 dB High-Output Alarm</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Coverage Area / Volume</td>
+              <td class="py-3.5 px-6 bg-red-50/50 font-bold text-emerald-700">8–10 m² (~8.5 m³)</td>
+              <td class="py-3.5 px-6">1.5–3.0 m³ Enclosed</td>
+              <td class="py-3.5 px-6">18–35 m² Matrix</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Storage Temperature</td>
+              <td class="py-3.5 px-6 bg-red-50/50">-40°C to +85°C</td>
+              <td class="py-3.5 px-6">-40°C to +85°C</td>
+              <td class="py-3.5 px-6">-40°C to +90°C</td>
+            </tr>
+            <tr>
+              <td class="py-3.5 px-6 font-bold text-slate-900">Shelf Life & Warranty</td>
+              <td class="py-3.5 px-6 bg-red-50/50 font-bold text-slate-900">5 Years (0 Maintenance)</td>
+              <td class="py-3.5 px-6 font-bold text-slate-900">5 Years (0 Maintenance)</td>
+              <td class="py-3.5 px-6 font-bold text-slate-900">5 Years (0 Maintenance)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 text-xs py-12 text-center">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <i class="fas fa-fire text-fireRed text-lg"></i>
+        <span class="font-heading font-bold text-white text-base">VANSH INDUSTRIES • FIRE XROSS™</span>
+      </div>
+      <p class="text-slate-400">CD-48 First Floor, Dadudayal Nagar, Jaipur, Rajasthan 302020 • Phone: +91 83025 50902</p>
+      <p class="text-slate-500">© 2026 Vansh Industries. All Rights Reserved. Engineered with Pride in India.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="imageLightboxModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl animate-fade-in p-4 sm:p-6">
+      <button onclick="closeImageModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center z-10 transition">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="max-h-[75vh] flex items-center justify-center overflow-auto rounded-xl bg-slate-50 mb-3">
+        <img id="lightboxImage" src="" alt="Enlarged Preview" class="max-w-full max-h-[70vh] object-contain" />
+      </div>
+      <p id="lightboxCaption" class="text-center font-bold text-slate-800 text-sm"></p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
