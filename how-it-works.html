@@ -36,6 +36,9 @@
   <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 relative z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-2 text-[11px]">
+        <span class="inline-flex items-center px-2 py-0.5 rounded bg-blue-600/40 text-blue-300 font-mono font-bold text-[10px] tracking-wide border border-blue-500/30">
+          <i class="fas fa-shield-check mr-1 text-blue-400"></i> Approved by LERC
+        </span>
         <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-red-600/30 text-red-400 font-mono font-semibold text-[10px]">ISO 9001:2015</span>
         <span class="hidden sm:inline text-slate-300">Vansh Industries • Automatic 360° Fire Suppression Balls</span>
       </div>
@@ -66,10 +69,13 @@
           </div>
         </a>
 
-        <!-- Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-8 xl:gap-10 text-[13.5px] font-semibold text-slate-600">
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 xl:gap-9 text-[13.5px] font-semibold text-slate-600">
           <a href="products.html" class="hover:text-fireRed transition-colors py-1">Products</a>
           <a href="how-it-works.html" class="text-fireRed font-bold transition-colors py-1">How It Works</a>
+          <a href="index.html#approvedLerc" class="hover:text-blue-700 transition-colors py-1 flex items-center gap-1.5 text-blue-700 font-bold">
+            <i class="fas fa-certificate text-xs"></i> LERC Approval
+          </a>
           <a href="index.html#videoShowcase" class="hover:text-fireRed transition-colors py-1">Live Videos</a>
           <a href="calculator.html" class="hover:text-fireRed transition-colors py-1">Safety Calculator</a>
           <a href="dealership.html" class="hover:text-fireRed transition-colors py-1">Distributors</a>
@@ -162,19 +168,66 @@
 
   <!-- Video Demonstration -->
   <section class="py-12 bg-white border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="light-card p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl">
-        <div class="text-center mb-6">
-          <span class="badge-red-light font-mono font-bold text-xs uppercase">Audio-Visual Breakdown</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Watch How the Micro-Fuse & Powder React</h2>
-        </div>
-        <div class="video-card-container aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-200 max-w-3xl mx-auto">
-          <video controls preload="metadata" class="w-full h-full ">
-            <source src="assets/ai-info-video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <span class="badge-red-light font-mono font-bold text-xs uppercase">Operational Footage &amp; Science Breakdown</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Watch Fire XROSS in Action</h2>
+        <p class="text-slate-600 text-sm mt-1">See hands-on live field deployment and understand the chemical-microfuse suppression mechanics.</p>
       </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Demonstration Video -->
+        <div class="light-card p-6 rounded-3xl border border-slate-200 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="video-card-container aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-200 mb-4">
+              <video controls preload="metadata" class="w-full h-full object-cover">
+                <source src="assets/demonstration-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge-red-light font-mono font-bold text-[10px]">DEMONSTRATION</span>
+              <span class="text-slate-500 text-xs"><i class="fas fa-play-circle text-fireRed mr-1"></i> Live Field Demo</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1.5">Official Demonstration Video</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Complete hands-on operational demonstration showcasing handling ease, 360° dispersion, and immediate flame suppression upon thermal contact.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span><i class="fas fa-stopwatch text-fireRed mr-1"></i> Response: &lt; 3.0s</span>
+            <span class="font-semibold text-emerald-600"><i class="fas fa-check-circle mr-1"></i> Instant Suppression</span>
+          </div>
+        </div>
+
+        <!-- Explainer Video -->
+        <div class="light-card p-6 rounded-3xl border border-slate-200 shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="video-card-container aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-200 mb-4">
+              <video controls preload="metadata" class="w-full h-full object-cover">
+                <source src="assets/ai-info-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge-safety-light font-mono font-bold text-[10px]">TECH EXPLAINER</span>
+              <span class="text-slate-500 text-xs"><i class="fas fa-atom text-blue-600 mr-1"></i> Science &amp; Mechanics</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1.5">How the Micro-Fuse &amp; Powder React</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Detailed breakdown of internal pyrotechnic fuses, non-toxic MAP 90% dry chemical powder, and the 128 dB acoustic pop mechanism.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span><i class="fas fa-volume-high text-blue-600 mr-1"></i> 128 dB Warning</span>
+            <span class="font-semibold text-fireRed"><i class="fas fa-shield-halved mr-1"></i> Class A, B, C, E</span>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -322,6 +375,63 @@
 
     </div>
   </section>
+
+  <!-- Approved by LERC Endorsement Banner -->
+  <section class="py-14 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="light-card rounded-3xl p-6 sm:p-8 border border-blue-200 shadow-lg bg-gradient-to-b from-blue-50/50 via-white to-slate-50 space-y-6">
+        
+        <!-- TOP: LERC Seal & Title -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-4 border-b border-slate-200 text-center sm:text-left">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 rounded-xl bg-white border border-blue-200 flex items-center justify-center shrink-0 p-1.5 shadow-xs">
+              <img src="assets/lerc-logo.png" alt="LERC Official Seal" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div>
+              <span class="badge-safety-light text-[10px] font-mono font-bold uppercase">Officially Accredited</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1">Approved by LERC (LPG Equipment Research Centre)</h3>
+              <p class="text-xs text-slate-500">Joint Venture of Bharat Petroleum, IndianOil &amp; Hindustan Petroleum</p>
+            </div>
+          </div>
+          <a href="index.html#approvedLerc" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition shadow-sm flex items-center gap-1.5 shrink-0">
+            <i class="fas fa-shield-check"></i> Full Accreditation
+          </a>
+        </div>
+
+        <!-- CENTER: The Full-Width Approved_LERC Image Banner -->
+        <div class="rounded-xl border border-slate-200 bg-white p-3 shadow-xs">
+          <img src="assets/approved-lerc.png" alt="Approved by LERC - LPG Equipment Research Centre" class="w-full h-auto object-contain rounded-lg max-h-[220px] mx-auto block" />
+        </div>
+
+        <!-- BOTTOM: Seal & Verification Strip -->
+        <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center shrink-0 p-1">
+              <img src="assets/lerc-logo.png" alt="LERC Seal" class="max-w-full max-h-full object-contain" />
+            </div>
+            <span><strong>LERC Tested:</strong> 5-Year Maintenance-Free Warranty &amp; Non-Toxic MAP 90% Dry Chemical Formulation</span>
+          </div>
+          <div class="flex items-center gap-2 text-[11px] font-bold text-slate-700">
+            <span>BPCL</span> • <span>IOCL</span> • <span>HPCL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="imageLightboxModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl animate-fade-in p-4 sm:p-6">
+      <button onclick="closeImageModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center z-10 transition">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="max-h-[75vh] flex items-center justify-center overflow-auto rounded-xl bg-slate-50 mb-3">
+        <img id="lightboxImage" src="" alt="Enlarged Preview" class="max-w-full max-h-[70vh] object-contain" />
+      </div>
+      <p id="lightboxCaption" class="text-center font-bold text-slate-800 text-sm"></p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-slate-900 text-slate-300 text-xs py-12 text-center">

@@ -40,6 +40,9 @@
   <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 relative z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-2 text-[11px]">
+        <span class="inline-flex items-center px-2 py-0.5 rounded bg-blue-600/40 text-blue-300 font-mono font-bold text-[10px] tracking-wide border border-blue-500/30">
+          <i class="fas fa-shield-check mr-1 text-blue-400"></i> Approved by LERC
+        </span>
         <span class="inline-flex items-center px-1.5 py-0.5 rounded bg-red-600/30 text-red-400 font-mono font-semibold text-[10px]">ISO 9001:2015</span>
         <span class="hidden sm:inline text-slate-300">Vansh Industries • Automatic 360° Fire Suppression Balls</span>
       </div>
@@ -71,9 +74,12 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8 xl:gap-10 text-[13.5px] font-semibold text-slate-600">
+        <nav class="hidden lg:flex items-center gap-7 xl:gap-9 text-[13.5px] font-semibold text-slate-600">
           <a href="products.html" class="hover:text-fireRed transition-colors py-1">Products</a>
           <a href="how-it-works.html" class="hover:text-fireRed transition-colors py-1">How It Works</a>
+          <a href="#approvedLerc" class="hover:text-blue-700 transition-colors py-1 flex items-center gap-1.5 text-blue-700 font-bold">
+            <i class="fas fa-certificate text-xs"></i> LERC Approval
+          </a>
           <a href="#videoShowcase" class="hover:text-fireRed transition-colors py-1">Live Videos</a>
           <a href="calculator.html" class="hover:text-fireRed transition-colors py-1">Safety Calculator</a>
           <a href="dealership.html" class="hover:text-fireRed transition-colors py-1">Distributors</a>
@@ -119,6 +125,9 @@
         </a>
         <a href="how-it-works.html" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
           <i class="fas fa-atom w-5 text-slate-400"></i> How It Works
+        </a>
+        <a href="#approvedLerc" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-blue-700 bg-blue-50/70 hover:bg-blue-100/80 font-bold">
+          <i class="fas fa-shield-check w-5 text-blue-600"></i> LERC Approval
         </a>
         <a href="#videoShowcase" class="mobile-nav-link flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50">
           <i class="fas fa-play-circle w-5 text-slate-400"></i> Live Videos
@@ -210,7 +219,10 @@
           </div>
 
           <!-- Trust Badges -->
-          <div class="pt-4 flex flex-wrap items-center gap-5 text-xs text-slate-600 border-t border-slate-200">
+          <div class="pt-4 flex flex-wrap items-center gap-3.5 sm:gap-4 text-xs text-slate-600 border-t border-slate-200">
+            <a href="#approvedLerc" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-800 font-bold shadow-xs transition">
+              <i class="fas fa-shield-check text-blue-600"></i> <strong>Approved by LERC</strong> (BPCL • IOCL • HPCL)
+            </a>
             <span class="flex items-center gap-1.5"><i class="fas fa-certificate text-amber-500"></i> <strong>ISO 9001:2015</strong> Certified</span>
             <span class="flex items-center gap-1.5"><i class="fas fa-award text-emerald-600"></i> <strong>Approved by Govt. of India</strong></span>
             <span class="flex items-center gap-1.5"><i class="fas fa-shield-halved text-blue-600"></i> <strong>CE Quality Standard</strong></span>
@@ -239,10 +251,10 @@
               <span class="font-bold text-slate-900">24/7 Passive Guard</span>
             </div>
 
-            <div class="absolute -bottom-3 -left-3 bg-white/95 border border-slate-200 px-3.5 py-1.5 rounded-xl shadow-lg text-xs text-slate-800 flex items-center gap-2">
-              <i class="fas fa-check-circle text-fireRed"></i>
-              <span class="font-bold text-slate-900">Approved by Govt. of India</span>
-            </div>
+            <a href="#approvedLerc" class="absolute -bottom-3 -left-3 bg-white/95 border border-blue-200 hover:border-blue-400 px-3.5 py-1.5 rounded-xl shadow-lg text-xs text-slate-800 flex items-center gap-2 transition hover:shadow-xl group">
+              <i class="fas fa-shield-check text-blue-600 group-hover:scale-110 transition-transform"></i>
+              <span class="font-bold text-slate-900">Approved by LERC &amp; Govt. of India</span>
+            </a>
 
             <div class="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-white/95 border border-slate-200 px-3 py-1 rounded-lg shadow-md text-[11px] text-slate-700 hidden sm:flex items-center gap-1.5">
               <i class="fas fa-fire-flame-curved text-amber-500"></i>
@@ -293,6 +305,136 @@
     </div>
   </section>
 
+  <!-- Approved by LERC Showcase Section -->
+  <section id="approvedLerc" class="py-16 bg-white border-b border-slate-200 relative overflow-hidden">
+    <!-- Ambient subtle light accents -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-50/60 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-red-50/40 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
+          <i class="fas fa-shield-check text-blue-600"></i> Government &amp; PSU Energy Sector Accreditation
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+          Officially <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-indigo-800 to-red-600">Approved by LERC</span>
+        </h2>
+        <p class="text-slate-600 mt-3 text-base sm:text-lg leading-relaxed">
+          Certified by the <strong>LPG Equipment Research Centre (LERC)</strong> — India’s apex technical safety institution established as a premier joint venture of <strong>Bharat Petroleum (BPCL)</strong>, <strong>IndianOil (IOCL)</strong>, and <strong>Hindustan Petroleum (HPCL)</strong>.
+        </p>
+      </div>
+
+      <!-- Main LERC Feature Showcase (Vertical Stack) -->
+      <div class="light-card rounded-3xl p-6 sm:p-10 border border-blue-100/80 shadow-xl bg-gradient-to-b from-slate-50/80 via-white to-blue-50/30 space-y-8">
+        
+        <!-- TOP: LERC Seal & Official Authority Header -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-200">
+          <div class="flex flex-col sm:flex-row items-center sm:items-center gap-4 text-center sm:text-left">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white border-2 border-blue-200 flex items-center justify-center shrink-0 p-2 shadow-sm">
+              <img src="assets/lerc-logo.png" alt="LERC Official Seal" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div>
+              <div class="text-[11px] font-mono font-bold text-blue-700 uppercase tracking-wider flex items-center justify-center sm:justify-start gap-1.5">
+                <i class="fas fa-shield-check text-blue-600"></i> Apex Technical Authority Seal
+              </div>
+              <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">LPG Equipment Research Centre (LERC)</h3>
+              <p class="text-xs text-slate-500 mt-0.5">Central Technical Authority under Ministry of Petroleum &amp; Natural Gas, Govt. of India</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold font-mono shadow-xs">
+              <i class="fas fa-check-double text-emerald-600"></i> Active Certification
+            </span>
+          </div>
+        </div>
+
+        <!-- CENTER: The Full-Width Approved_LERC Image Banner -->
+        <div class="space-y-2">
+          <div class="rounded-2xl border-2 border-slate-200 bg-white p-3 sm:p-6 shadow-sm">
+            <img 
+              src="assets/approved-lerc.png" 
+              alt="Approved by LERC - LPG Equipment Research Centre Joint Venture of Bharat Petroleum, IndianOil, HPCL" 
+              class="w-full h-auto object-contain rounded-xl max-h-[280px] mx-auto block"
+            />
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-1 text-xs text-slate-500 px-1 pt-1">
+            <span class="flex items-center gap-1.5 font-medium text-slate-600">
+              <i class="fas fa-certificate text-blue-600"></i> Official LERC Authorization Seal &amp; 5-Year Maintenance-Free Guarantee
+            </span>
+            <span class="font-mono text-slate-500 text-[11px]">
+              Govt. of India Energy Sector Standard
+            </span>
+          </div>
+        </div>
+
+        <!-- BOTTOM: Key Trust Pillars Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+          
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <i class="fas fa-handshake text-base"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">Tri-Oil Maharatna JV</div>
+              <div class="text-[11.5px] text-slate-600 leading-relaxed mt-0.5">Tested and validated under joint technical standards established by BPCL, IndianOil, and HPCL.</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
+              <i class="fas fa-shield-alt text-base"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">5-Year Zero-Maintenance</div>
+              <div class="text-[11.5px] text-slate-600 leading-relaxed mt-0.5">Certified continuous operational readiness for 5 full years with zero annual refilling or pressure checks.</div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-xs flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+              <i class="fas fa-leaf text-base"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">100% Eco-Friendly MAP 90%</div>
+              <div class="text-[11.5px] text-slate-600 leading-relaxed mt-0.5">Environmentally safe dry chemical agent, safe for kitchens, consumer LPG setups, and electrical panels.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- BOTTOM SEAL BAR: LERC Seal & Joint Venture Stakeholders -->
+        <div class="pt-6 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 bg-white/70 p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center shrink-0 p-1.5 shadow-xs">
+              <img src="assets/lerc-logo.png" alt="LERC Seal" class="max-w-full max-h-full object-contain" />
+            </div>
+            <div>
+              <div class="text-xs font-bold text-slate-900">Official LERC Accreditation Seal</div>
+              <div class="text-[11px] text-slate-500">Ministry of Petroleum &amp; Natural Gas • Joint Venture Protocol</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-2.5 text-xs font-bold">
+            <span class="px-3 py-1.5 rounded-lg bg-yellow-50 text-yellow-900 border border-yellow-200 flex items-center gap-1.5 shadow-xs">
+              <i class="fas fa-gas-pump text-yellow-600"></i> Bharat Petroleum
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-orange-50 text-orange-900 border border-orange-200 flex items-center gap-1.5 shadow-xs">
+              <i class="fas fa-fire-flame-simple text-orange-600"></i> IndianOil
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-blue-50 text-blue-900 border border-blue-200 flex items-center gap-1.5 shadow-xs">
+              <i class="fas fa-oil-well text-blue-600"></i> Hindustan Petroleum (HP)
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- Video Showcase -->
   <section id="videoShowcase" class="py-16 bg-[#F8FAFC] border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,9 +449,33 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Video 1 -->
+        <!-- Video 1: Demonstration Video -->
+        <div class="light-card p-4 flex flex-col justify-between border-2 border-red-200/80 shadow-md hover:border-fireRed transition-all">
+          <div>
+            <div class="video-card-container aspect-video rounded-xl relative mb-4">
+              <video controls preload="metadata" class="w-full h-full object-cover">
+                <source src="assets/demonstration-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge-red-light font-mono font-bold text-[10px]">DEMONSTRATION</span>
+              <span class="text-slate-500 text-xs"><i class="fas fa-play-circle text-fireRed mr-1"></i> Official Demo</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1.5">Demonstration Video</h3>
+            <p class="text-slate-600 text-xs leading-relaxed">
+              Complete hands-on operational demonstration showcasing handling ease, rapid burst activation, and total flame quenching.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span><i class="fas fa-stopwatch text-fireRed mr-1"></i> Response: &lt; 3.0s</span>
+            <span class="font-semibold text-emerald-600"><i class="fas fa-check-circle mr-1"></i> Instant Quench</span>
+          </div>
+        </div>
+
+        <!-- Video 2: Live Flame Extinguishment Test -->
         <div class="light-card p-4 flex flex-col justify-between">
           <div>
             <div class="video-card-container aspect-video rounded-xl relative mb-4">
@@ -333,7 +499,7 @@
           </div>
         </div>
 
-        <!-- Video 2 -->
+        <!-- Video 3: Active Toss & Instant Quench -->
         <div class="light-card p-4 flex flex-col justify-between">
           <div>
             <div class="video-card-container aspect-video rounded-xl relative mb-4">
@@ -346,7 +512,7 @@
               <span class="badge-green-light font-mono font-bold text-[10px]">LIVE TEST 02</span>
               <span class="text-slate-500 text-xs"><i class="fas fa-hand-holding mr-1 text-emerald-600"></i> Active Throw Mode</span>
             </div>
-            <h3 class="text-lg font-bold text-slate-900 mb-1.5">Active Toss & Instant Quench</h3>
+            <h3 class="text-lg font-bold text-slate-900 mb-1.5">Active Toss &amp; Instant Quench</h3>
             <p class="text-slate-600 text-xs leading-relaxed">
               Demonstrating the active method: safely throwing the lightweight sphere into the heart of a blaze from a protected distance.
             </p>
@@ -357,7 +523,7 @@
           </div>
         </div>
 
-        <!-- Video 3 -->
+        <!-- Video 4: Explainer -->
         <div class="light-card p-4 flex flex-col justify-between">
           <div>
             <div class="video-card-container aspect-video rounded-xl relative mb-4">
@@ -400,42 +566,55 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <div class="light-card p-4 cursor-pointer media-preview-card" onclick="openImageModal('assets/key-features.jpeg', 'Vansh Fire XROSS - Key Features Infographic')">
-          <div class="h-64 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center border border-slate-200 relative mb-4">
+          <div class="h-60 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center border border-slate-200 relative mb-4">
             <img src="assets/key-features.jpeg" alt="Fire Safety Made Simple - Key Features" class="w-full h-full object-cover" />
             <div class="absolute bottom-2 right-2 bg-slate-900/80 text-white text-[11px] px-2.5 py-1 rounded-md">
               <i class="fas fa-expand mr-1"></i> Click to Zoom
             </div>
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-1">Key Features Overview</h3>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Key Features Overview</h3>
           <p class="text-slate-600 text-xs leading-relaxed">
             Highlights automatic activation, zero training requirement, safe non-toxic chemical powder, and multi-location deployment.
           </p>
         </div>
 
         <div class="light-card p-4 cursor-pointer media-preview-card" onclick="openImageModal('assets/salient-features.jpeg', 'Vansh Fire XROSS - Salient Features & Packaging Box')">
-          <div class="h-64 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center border border-slate-200 relative mb-4">
+          <div class="h-60 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center border border-slate-200 relative mb-4">
             <img src="assets/salient-features.jpeg" alt="Vansh Fire XROSS Salient Features and Packaging Box" class="w-full h-full object-contain p-2" />
             <div class="absolute bottom-2 right-2 bg-slate-900/80 text-white text-[11px] px-2.5 py-1 rounded-md">
               <i class="fas fa-expand mr-1"></i> Click to Zoom
             </div>
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-1">Retail Packaging & Salient Specs</h3>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Retail Packaging &amp; Salient Specs</h3>
           <p class="text-slate-600 text-xs leading-relaxed">
             Shows the genuine product retail box, certified safety markings, 5-year warranty seal, and detailed operational guidelines.
           </p>
         </div>
 
+        <div class="light-card p-4 media-preview-card border-2 border-blue-200/90 shadow-sm">
+          <div class="h-60 rounded-xl overflow-hidden bg-white flex items-center justify-center border border-slate-200 relative mb-4 p-2">
+            <img src="assets/approved-lerc.png" alt="Approved by LERC Certificate - BPCL, IndianOil, HPCL" class="w-full h-full object-contain" />
+            <div class="absolute top-2 left-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
+              LERC ACCREDITATION
+            </div>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Approved by LERC Certificate</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Official LERC approval banner with Joint Venture endorsement from Bharat Petroleum, IndianOil, and Hindustan Petroleum.
+          </p>
+        </div>
+
         <div class="light-card p-4 cursor-pointer media-preview-card" onclick="openImageModal('assets/pamphlet.jpeg', 'Vansh Industries - Lifetime Business Opportunity & Distributor Brochure')">
-          <div class="h-64 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center border border-slate-200 relative mb-4">
+          <div class="h-60 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center border border-slate-200 relative mb-4">
             <img src="assets/pamphlet.jpeg" alt="Become a Distributor - Vansh Industries Pamphlet" class="w-full h-full object-cover" />
             <div class="absolute bottom-2 right-2 bg-slate-900/80 text-white text-[11px] px-2.5 py-1 rounded-md">
               <i class="fas fa-expand mr-1"></i> Click to Zoom
             </div>
           </div>
-          <h3 class="text-lg font-bold text-slate-900 mb-1">Distributor & Dealership Brochure</h3>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Distributor &amp; Dealership Brochure</h3>
           <p class="text-slate-600 text-xs leading-relaxed">
             Commercial guide for high-margin state/city distributors, direct factory supply, and sales marketing backing.
           </p>
@@ -1276,7 +1455,12 @@
             <p class="text-slate-600 text-xs mt-2">Every Vansh Fire XROSS ball undergoes 100% pneumatic, drop-test, and ignition speed QC verification.</p>
           </div>
 
-          <div class="md:col-span-3 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div class="md:col-span-3 grid grid-cols-2 sm:grid-cols-5 gap-4 sm:gap-6">
+            <div class="space-y-1">
+              <i class="fas fa-shield-check text-blue-600 text-2xl mb-1"></i>
+              <div class="text-sm font-bold text-slate-900">Approved by LERC</div>
+              <p class="text-[11px] text-slate-500">BPCL • IOCL • HPCL JV</p>
+            </div>
             <div class="space-y-1">
               <i class="fas fa-certificate text-amber-500 text-2xl mb-1"></i>
               <div class="text-sm font-bold text-slate-900">ISO 9001:2015</div>
@@ -1528,7 +1712,7 @@
             <span class="font-heading font-extrabold text-xl text-white">ROYAL RAJASTHAN COLLECTION</span>
           </div>
           <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
-            Manufacturer and distributor of <strong>Fire XROSS™</strong> 360° self-activating fire extinguishing balls. Protecting homes, industries, vehicles, and enterprise infrastructure 24/7 without manual intervention.
+            Authorized distributor of <strong>Fire XROSS™</strong> 360° self-activating fire extinguishing balls. Protecting homes, industries, vehicles, and enterprise infrastructure 24/7 without manual intervention.
           </p>
           <div class="text-xs text-slate-400 space-y-1">
             <p><i class="fas fa-map-marker-alt text-fireRed mr-2"></i> CD-48 First Floor, Dadudayal Nagar, Jaipur, Rajasthan 302020</p>
