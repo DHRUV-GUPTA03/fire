@@ -461,3 +461,25 @@ input[type=range]::-webkit-slider-thumb:hover {
 .video-16-9 {
   aspect-ratio: 16 / 9 !important;
 }
+
+/* Product Showcase Master Carousel */
+.carousel-slide-item {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.45s ease-in-out;
+}
+.carousel-slide-item.active {
+  display: flex;
+  opacity: 1;
+}
+.carousel-thumb-btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.carousel-thumb-btn.active {
+  border-color: var(--fire-red) !important;
+  box-shadow: 0 0 0 2px rgba(217, 4, 41, 0.35);
+  transform: translateY(-2px);
+}
+.carousel-progress-bar {
+  transition: width 3.5s linear;
+}

@@ -427,129 +427,284 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- SECTION C: PRODUCT IMAGE SHOWCASE -->
+  <!-- SECTION C: PRODUCT IMAGE SHOWCASE (MASTER INTERACTIVE CAROUSEL) -->
   <!-- ========================================================= -->
   <section id="gallery" class="py-16 bg-[#F8FAFC]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-center max-w-3xl mx-auto mb-10">
         <span class="text-xs font-bold uppercase tracking-wider text-fireRed font-mono">Product Photography</span>
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-slate-900 mt-2">
-          GasSafe Product Showcase & Details
+          GasSafe Product Showcase & Interactive Viewer
         </h2>
         <p class="text-slate-600 mt-3 text-sm">
-          High-definition authentic product photographs from GasSafe India showcasing build quality, pressure indicator dial, cylinder connection collar, and real-world installation.
+          Explore authentic high-definition product angles, internal shut-off mechanics, pressure dial zones, and cylinder installation in our unified interactive viewer.
         </p>
       </div>
 
-      <!-- Gallery Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- MASTER VIEWER FRAME CONTAINER -->
+      <div id="productCarousel" class="max-w-5xl mx-auto bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden relative">
         
-        <!-- Image 1 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-main.webp" data-caption="GasSafe Vertical Device - Complete Assembly Profile">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-main.webp" alt="GasSafe Vertical Device Front Profile" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-          </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Main Assembly</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
+        <!-- Top Toolbar / Status Strip -->
+        <div class="relative bg-slate-900 text-white px-5 py-3.5 flex items-center justify-between border-b border-slate-800">
+          <div class="flex items-center gap-2.5">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-red-600/30 text-fireRed border border-red-500/30 text-xs">
+              <i class="fas fa-camera"></i>
             </span>
+            <span class="font-heading font-bold text-xs sm:text-sm tracking-wide text-slate-200">Official Product Gallery</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <!-- Slide Counter -->
+            <div id="carouselCounter" class="font-mono text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">
+              01 / 08
+            </div>
+
+            <!-- Auto-scroll Play / Pause Toggle -->
+            <button id="carouselPlayPauseBtn" type="button" title="Pause / Resume Auto-Play" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 flex items-center justify-center transition border border-slate-700 text-xs cursor-pointer">
+              <i id="carouselPlayPauseIcon" class="fas fa-pause text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Progress Bar Line -->
+          <div class="absolute bottom-0 left-0 right-0 h-[2px] bg-slate-800">
+            <div id="carouselProgressBar" class="carousel-progress-bar h-full bg-gradient-to-r from-red-600 to-orange-500 w-0"></div>
           </div>
         </div>
 
-        <!-- Image 2 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-angle-front.jpg" data-caption="Studio Perspective View - Dial Face and Brass Connector">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-angle-front.jpg" alt="Studio Perspective View of GasSafe" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+        <!-- Master Viewer Main Stage -->
+        <div class="relative w-full h-[360px] sm:h-[460px] md:h-[520px] bg-gradient-to-b from-slate-50/60 via-white to-slate-50/80 flex items-center justify-center p-4 sm:p-8 select-none">
+          
+          <!-- Slide 1 -->
+          <div class="carousel-slide-item active gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-main.webp" data-caption="GasSafe Vertical Device - Complete Assembly Profile">
+            <img src="../assets/gassafe/gassafe-main.webp" alt="GasSafe Vertical Device Front Profile" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="eager" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Main Assembly</span>
+                <span class="text-slate-400 hidden sm:inline">• Complete Vertical Device Profile</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
           </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Perspective Angle</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
-            </span>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide-item gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-angle-front.jpg" data-caption="Studio Perspective View - Dial Face and Brass Connector">
+            <img src="../assets/gassafe/gassafe-angle-front.jpg" alt="Studio Perspective View of GasSafe" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Perspective View</span>
+                <span class="text-slate-400 hidden sm:inline">• Angle Profile & Dual Ports</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
           </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-slide-item gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-angle-top.jpg" data-caption="Top Angled View - Pressure Zone Display and Release Lever">
+            <img src="../assets/gassafe/gassafe-angle-top.jpg" alt="Top View of GasSafe Dial Face" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Top Angle</span>
+                <span class="text-slate-400 hidden sm:inline">• Dial Face & Control Mechanism</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-slide-item gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-gauge-detail.jpg" data-caption="Macro Detail - Pressure Gauge Zones (Low, Normal & Leak Test)">
+            <img src="../assets/gassafe/gassafe-gauge-detail.jpg" alt="Close-up Macro of Pressure Indicator Gauge" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Gauge Macro Detail</span>
+                <span class="text-slate-400 hidden sm:inline">• 3-Zone Pressure & Leak Indicator</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="carousel-slide-item gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-valve-connection.jpg" data-caption="Vertical Cylinder Connection Collar and Locking Mechanism">
+            <img src="../assets/gassafe/gassafe-valve-connection.jpg" alt="Cylinder Valve Connection Collar Detail" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Valve Connection Collar</span>
+                <span class="text-slate-400 hidden sm:inline">• Tool-Free Snap Lock</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Slide 6 -->
+          <div class="carousel-slide-item gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-side-view.jpg" data-caption="Heavy Brass Construction & Internal Cut-off Chamber Body">
+            <img src="../assets/gassafe/gassafe-side-view.jpg" alt="Side Profile of Solid Brass Body" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Forged Brass Construction</span>
+                <span class="text-slate-400 hidden sm:inline">• High-Grade Burst Resistance</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Slide 7 -->
+          <div class="carousel-slide-item gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-installation-view.jpg" data-caption="Real-World Domestic Installation on LPG Cylinder">
+            <img src="../assets/gassafe/gassafe-installation-view.jpg" alt="GasSafe Device Installed on LPG Cylinder" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Live Cylinder Installation</span>
+                <span class="text-slate-400 hidden sm:inline">• Fits Standard Domestic LPG</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Slide 8 -->
+          <div class="carousel-slide-item gallery-item w-full h-full flex flex-col items-center justify-center cursor-pointer group" data-src="../assets/gassafe/gassafe-packaging-box.jpg" data-caption="Official Retail Packaging & Warranty Documentation">
+            <img src="../assets/gassafe/gassafe-packaging-box.jpg" alt="GasSafe Retail Packaging and Documentation" class="max-h-[280px] sm:max-h-[360px] md:max-h-[400px] w-auto max-w-full object-contain drop-shadow-xl transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            <div class="absolute bottom-4 left-4 right-4 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <div class="inline-flex items-center gap-2 bg-slate-900/80 backdrop-blur-md text-white px-3.5 py-1.5 rounded-xl text-xs font-medium border border-slate-700/60 shadow-lg">
+                <span class="w-2 h-2 rounded-full bg-fireRed"></span>
+                <span class="font-bold text-slate-100">Retail Packaging & Specs</span>
+                <span class="text-slate-400 hidden sm:inline">• Genuine Hologram & Warranty</span>
+              </div>
+              <span class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-md text-slate-800 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-md border border-slate-200 pointer-events-auto group-hover:bg-fireRed group-hover:text-white transition">
+                <i class="fas fa-expand text-[11px]"></i>
+                <span class="hidden sm:inline">Click to Zoom</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Left Prev Button -->
+          <button id="carouselPrevBtn" type="button" aria-label="Previous Image" class="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-slate-800 hover:text-fireRed border border-slate-200/90 shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 z-10 cursor-pointer">
+            <i class="fas fa-chevron-left text-sm sm:text-base"></i>
+          </button>
+
+          <!-- Right Next Button -->
+          <button id="carouselNextBtn" type="button" aria-label="Next Image" class="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-slate-800 hover:text-fireRed border border-slate-200/90 shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 z-10 cursor-pointer">
+            <i class="fas fa-chevron-right text-sm sm:text-base"></i>
+          </button>
         </div>
 
-        <!-- Image 3 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-angle-top.jpg" data-caption="Top Angled View - Pressure Zone Display and Release Lever">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-angle-top.jpg" alt="Top View of GasSafe Dial Face" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-          </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Dial Face & Controls</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
-            </span>
-          </div>
-        </div>
+        <!-- Horizontal Scrollable Thumbnail Strip -->
+        <div class="bg-slate-50 border-t border-slate-200 px-3 py-3">
+          <div class="flex items-center gap-2.5 overflow-x-auto pb-1.5 pt-0.5 px-1 scroll-smooth" style="scrollbar-width: thin;">
+            
+            <button type="button" class="carousel-thumb-btn active shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="0">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-main.webp" alt="Thumbnail 1" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Assembly</div>
+                <div class="text-[10px] text-slate-400">Profile</div>
+              </div>
+            </button>
 
-        <!-- Image 4 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-gauge-detail.jpg" data-caption="Macro Detail - Pressure Gauge Zones (Low, Normal & Leak Test)">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-gauge-detail.jpg" alt="Close-up Macro of Pressure Indicator Gauge" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-          </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Gauge Macro Detail</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
-            </span>
-          </div>
-        </div>
+            <button type="button" class="carousel-thumb-btn shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="1">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-angle-front.jpg" alt="Thumbnail 2" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Perspective</div>
+                <div class="text-[10px] text-slate-400">Dial Port</div>
+              </div>
+            </button>
 
-        <!-- Image 5 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-valve-connection.jpg" data-caption="Vertical Cylinder Connection Collar and Locking Mechanism">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-valve-connection.jpg" alt="Cylinder Valve Connection Collar Detail" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-          </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Valve Lock Collar</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
-            </span>
-          </div>
-        </div>
+            <button type="button" class="carousel-thumb-btn shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="2">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-angle-top.jpg" alt="Thumbnail 3" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Top View</div>
+                <div class="text-[10px] text-slate-400">Lever</div>
+              </div>
+            </button>
 
-        <!-- Image 6 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-side-view.jpg" data-caption="Heavy Brass Construction & Internal Cut-off Chamber Body">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-side-view.jpg" alt="Side Profile of Solid Brass Body" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-          </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Forged Brass Body</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
-            </span>
-          </div>
-        </div>
+            <button type="button" class="carousel-thumb-btn shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="3">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-gauge-detail.jpg" alt="Thumbnail 4" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Gauge Macro</div>
+                <div class="text-[10px] text-slate-400">3 Zones</div>
+              </div>
+            </button>
 
-        <!-- Image 7 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-installation-view.jpg" data-caption="Real-World Domestic Installation on LPG Cylinder">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-installation-view.jpg" alt="GasSafe Device Installed on LPG Cylinder" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-          </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Real Installation</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
-            </span>
-          </div>
-        </div>
+            <button type="button" class="carousel-thumb-btn shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="4">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-valve-connection.jpg" alt="Thumbnail 5" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Collar Lock</div>
+                <div class="text-[10px] text-slate-400">Valve Snap</div>
+              </div>
+            </button>
 
-        <!-- Image 8 -->
-        <div class="gallery-item group relative bg-white rounded-2xl p-4 border border-slate-200 shadow-sm hover:shadow-lg transition cursor-pointer overflow-hidden" data-src="../assets/gassafe/gassafe-packaging-box.jpg" data-caption="Official Retail Packaging & Warranty Documentation">
-          <div class="aspect-square w-full rounded-xl bg-slate-50 flex items-center justify-center overflow-hidden">
-            <img src="../assets/gassafe/gassafe-packaging-box.jpg" alt="GasSafe Retail Packaging and Documentation" class="h-full w-full object-contain p-2 group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-          </div>
-          <div class="pt-3 flex items-center justify-between text-xs">
-            <span class="font-semibold text-slate-800">Packaging & Warranty</span>
-            <span class="text-fireRed font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <i class="fas fa-expand text-[10px]"></i> Zoom
-            </span>
+            <button type="button" class="carousel-thumb-btn shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="5">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-side-view.jpg" alt="Thumbnail 6" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Forged Brass</div>
+                <div class="text-[10px] text-slate-400">Solid Body</div>
+              </div>
+            </button>
+
+            <button type="button" class="carousel-thumb-btn shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="6">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-installation-view.jpg" alt="Thumbnail 7" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Installation</div>
+                <div class="text-[10px] text-slate-400">On Cylinder</div>
+              </div>
+            </button>
+
+            <button type="button" class="carousel-thumb-btn shrink-0 flex items-center gap-2 p-1.5 rounded-xl bg-white border border-slate-200 hover:border-slate-400 cursor-pointer transition text-left" data-index="7">
+              <div class="w-12 h-12 rounded-lg bg-slate-50 overflow-hidden flex items-center justify-center p-1">
+                <img src="../assets/gassafe/gassafe-packaging-box.jpg" alt="Thumbnail 8" class="w-full h-full object-contain" />
+              </div>
+              <div class="pr-2 hidden sm:block">
+                <div class="text-[11px] font-bold text-slate-800 leading-tight">Packaging</div>
+                <div class="text-[10px] text-slate-400">Box & Manual</div>
+              </div>
+            </button>
+
           </div>
         </div>
 
       </div>
+
+    </div>
+  </section>
 
     </div>
   </section>

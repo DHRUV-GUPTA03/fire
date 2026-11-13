@@ -216,6 +216,137 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.body.appendChild(modal);
   };
+
+  // GasSafe Product Showcase Carousel Controller
+  const carouselContainer = document.getElementById('productCarousel');
+  if (carouselContainer) {
+    const slides = carouselContainer.querySelectorAll('.carousel-slide-item');
+    const thumbs = document.querySelectorAll('.carousel-thumb-btn');
+    const prevBtn = document.getElementById('carouselPrevBtn');
+    const nextBtn = document.getElementById('carouselNextBtn');
+    const counterEl = document.getElementById('carouselCounter');
+    const playPauseBtn = document.getElementById('carouselPlayPauseBtn');
+    const playPauseIcon = document.getElementById('carouselPlayPauseIcon');
+    const progressBar = document.getElementById('carouselProgressBar');
+    let currentIndex = 0;
+    let isPlaying = true;
+    let timer = null;
+    const intervalTime = 3800;
+
+    const updateSlide = (newIndex) => {
+      if (!slides.length) return;
+      slides[currentIndex].classList.remove('active');
+      if (thumbs[currentIndex]) thumbs[currentIndex].classList.remove('active');
+
+      currentIndex = (newIndex + slides.length) % slides.length;
+
+      slides[currentIndex].classList.add('active');
+      if (thumbs[currentIndex]) {
+        thumbs[currentIndex].classList.add('active');
+        thumbs[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+
+      if (counterEl) {
+        counterEl.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+      }
+
+      resetProgressBar();
+    };
+
+    const resetProgressBar = () => {
+      if (!progressBar) return;
+      progressBar.style.transition = 'none';
+      progressBar.style.width = '0%';
+      if (isPlaying) {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            progressBar.style.transition = `width ${intervalTime}ms linear`;
+            progressBar.style.width = '100%';
+          }, 20);
+        });
+      }
+    };
+
+    const startTimer = () => {
+      stopTimer();
+      if (isPlaying) {
+        resetProgressBar();
+        timer = setInterval(() => {
+          updateSlide(currentIndex + 1);
+        }, intervalTime);
+      }
+    };
+
+    const stopTimer = () => {
+      if (timer) clearInterval(timer);
+      if (progressBar) {
+        progressBar.style.transition = 'none';
+        progressBar.style.width = '0%';
+      }
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        updateSlide(currentIndex - 1);
+        startTimer();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        updateSlide(currentIndex + 1);
+        startTimer();
+      });
+    }
+
+    thumbs.forEach((thumb, idx) => {
+      thumb.addEventListener('click', () => {
+        updateSlide(idx);
+        startTimer();
+      });
+    });
+
+    if (playPauseBtn) {
+      playPauseBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (playPauseIcon) {
+          playPauseIcon.className = isPlaying ? 'fas fa-pause text-xs' : 'fas fa-play text-xs';
+        }
+        if (isPlaying) {
+          startTimer();
+        } else {
+          stopTimer();
+        }
+      });
+    }
+
+    // Pause on hover
+    carouselContainer.addEventListener('mouseenter', () => {
+      if (isPlaying) stopTimer();
+    });
+    carouselContainer.addEventListener('mouseleave', () => {
+      if (isPlaying) startTimer();
+    });
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    carouselContainer.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carouselContainer.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 45) {
+        updateSlide(currentIndex + 1);
+        startTimer();
+      } else if (touchEndX - touchStartX > 45) {
+        updateSlide(currentIndex - 1);
+        startTimer();
+      }
+    }, { passive: true });
+
+    startTimer();
+  }
 });
 
 // Image Lightbox
