@@ -458,3 +458,6 @@ input[type=range]::-webkit-slider-thumb:hover {
 .aspect-video {
   aspect-ratio: 9 / 16 !important;
 }
+.video-16-9 {
+  aspect-ratio: 16 / 9 !important;
+}
