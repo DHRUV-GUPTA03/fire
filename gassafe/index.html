@@ -656,11 +656,12 @@
         </p>
       </div>
 
-      <!-- Video Container -->
-      <div class="max-w-4xl mx-auto">
-        <div class="relative w-full aspect-video rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black">
+      <!-- Video Container (Constrained 16:9 Widescreen) -->
+      <div class="max-w-3xl mx-auto">
+        <div class="relative w-full video-16-9 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-700 bg-black" style="aspect-ratio: 16/9; max-height: min(65vh, 460px);">
           <iframe 
             class="w-full h-full"
+            style="aspect-ratio: 16/9;"
             src="https://www.youtube-nocookie.com/embed/xcplj3AN0TY" 
             title="GasSafe Vertical Gas Safety Device Demonstration Video" 
             frameborder="0" 
